@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #e5e5e5;
+    font-family: Verdana;
+    transition: .3s ease all;
+}
+
+body.oscuro {
+    background-color: #000000;
+    color: #e1e5f2;
+    font-family: monospace;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 300px;
+    margin: auto;
+}
+
+.texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.cambio {
+    background: #14213d;
+    border-radius: 250px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+
+.cambio::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #ebf2fa;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cambio.ativo {
+    background: #ebf2fa;
+}
+
+.cambio.ativo::after {
+    right: 0;
+    left: unset;
+}
+
+.cambio span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+}
+
+.fa-moon {
+    color: #33a8c7;
+}
+
+.fa-sun {
+    color: #f4a261;
+}
