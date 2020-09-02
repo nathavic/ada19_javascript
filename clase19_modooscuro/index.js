@@ -11,9 +11,4 @@ const modoOscuro = document.querySelector('#cambio')
 modoOscuro.onclick = () => {
     document.body.classList.toggle("oscuro")
     modoOscuro.classList.toggle("ativo")
-
-    if (luna.contains("ativo") === "true") {
-        document.body.classList.add("oscuro")
-        modoOscuro.classList.add("ativo")
-    }
 }
